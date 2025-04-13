@@ -3,8 +3,7 @@ import logo from "../../assets/logo.png";
 import { usePDF } from "react-to-pdf";
 
 const Quotation = () => {
-  const targetRef = useRef();
-  const { toPDF, targetRef: pdfRef } = usePDF({
+  const { toPDF } = usePDF({
     filename: `Quotation.pdf`,
   });
   const [quotationNumber, setQuotationNumber] = useState("2025105");
