@@ -65,7 +65,12 @@ const Quotation = () => {
   };
 
   const handleDownloadPDF = () => {
-    toPDF();
+    if (pdfRef.current) {
+    toPDF(pdfRef.current);
+  } else {
+    console.error("PDF ref is not assigned yet.");
+  }
+ 
   };
 
   const totalPages = Math.max(2, Math.ceil((items.length - 3) / 5) + 1);
